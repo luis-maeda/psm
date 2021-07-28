@@ -46,13 +46,13 @@
         Write-Output $Result
       register: log_result
 
-    - name: Fetch hardening log from path
-      fetch:
-        src: '{{ item.logPath }}'
-        dest: '{{ lookup("config", "DEFAULT_LOG_PATH") | dirname }}/psm/{{ inventory_hostname }}_hardening.log'
-        flat: yes
-      with_items:
-        - "{{ log_result.stdout | from_json }}"
+#     - name: Fetch hardening log from path
+#       fetch:
+#         src: '{{ item.logPath }}'
+#         dest: '{{ lookup("config", "DEFAULT_LOG_PATH") | dirname }}/psm/{{ inventory_hostname }}_hardening.log'
+#         flat: yes
+#       with_items:
+#         - "{{ log_result.stdout | from_json }}"
 
     - name: Enable AutoAdminLogon
       win_regedit:
