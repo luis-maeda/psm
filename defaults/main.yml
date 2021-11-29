@@ -15,7 +15,7 @@ psm_registered: false
 
 psm_service_name: "Cyber-Ark Privileged Session Manager"
 
-psm_base_bin_drive: "F:"
+psm_base_bin_drive: "C:"
 psm_extract_folder: "{{ psm_base_bin_drive }}\\Cyberark\\packages"
 psm_artifact_name: "psm.zip"
 psm_component_folder: "Privileged Session Manager"
